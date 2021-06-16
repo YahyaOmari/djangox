@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 # GENERAL
 # ------------------------------------------------------------------------------
@@ -33,6 +34,7 @@ INSTALLED_APPS = [
     # Local
     'accounts',
     'pages',
+    "snacks",
 ]
 
 # MIDDLEWARE
@@ -64,6 +66,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': ['templates'],
+        # 'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
